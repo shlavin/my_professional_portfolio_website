@@ -1,70 +1,240 @@
-# Getting Started with Create React App
+Shayan Kahumu – Software Engineer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A production-ready personal portfolio built with React 18, Tailwind CSS, and Framer Motion.
+This application is designed as a single-page client-side rendered system that emphasizes performance, accessibility, and maintainability while showcasing projects, skills, and professional experience.
 
-## Available Scripts
+📌 Purpose
 
-In the project directory, you can run:
+This portfolio serves three primary goals:
 
-### `npm start`
+Professional Representation – Present projects, skills, and experience in a structured, recruiter-friendly format
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Technical Demonstration – Showcase frontend architecture, component composition, animations, and responsive design
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Extensibility – Allow easy updates, additions, and future backend integration
 
-### `npm test`
+🧱 System Architecture
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Architecture Type: Client-side rendered SPA (Single Page Application)
 
-### `npm run build`
+Rendering: React Virtual DOM
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Styling Strategy: Utility-first CSS with Tailwind
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Animation Layer: Declarative animation via Framer Motion
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+State Scope: Local component state (no global state library required)
 
-### `npm run eject`
+Deployment Model: Static asset hosting via CDN (Netlify/Vercel)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+✨ Key Features (Concrete)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Responsive layout using Tailwind breakpoints (sm, md, lg, xl)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Animated section transitions using motion.div
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Project cards rendered from a structured JavaScript data model
 
-## Learn More
+Resume section with:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Tab-based navigation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Downloadable PDF resume
 
-### Code Splitting
+Tech stack section with categorized skills and proficiency indicators
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Dark/light theme support via Tailwind classes
 
-### Analyzing the Bundle Size
+Smooth scrolling navigation using anchor links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Optimized production build with code minification and tree-shaking
 
-### Making a Progressive Web App
+📁 Project Structure (Explained)
+portfolio/
+├── public/
+│   ├── index.html                  # Application entry HTML
+│   ├── images/
+│   │   └── profile.jpg             # Hero section profile image
+│   └── SHAYANI NYAMBURA KAHUMU - RESUME.pdf
+│
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx              # Navigation + mobile menu
+│   │   ├── Hero.jsx                # Landing section
+│   │   ├── Projects.jsx            # Project listing & modal logic
+│   │   ├── Resume.jsx              # Resume tabs & PDF download
+│   │   ├── Techstack.jsx           # Skills visualization
+│   │   └── Footer.jsx              # Contact & social links
+│   │
+│   ├── App.jsx                     # Component composition root
+│   ├── index.js                    # React DOM bootstrap
+│   └── index.css                   # Tailwind base styles
+│
+├── tailwind.config.js               # Theme customization
+├── package.json                     # Dependency graph & scripts
+└── README.md
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🛠️ Technology Stack
+Frontend
 
-### Advanced Configuration
+React 18 – Component-based UI system
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Tailwind CSS – Utility-first styling
 
-### Deployment
+Framer Motion – Declarative animations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Lucide React – Icon system
 
-### `npm run build` fails to minify
+Tooling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Create React App – Build configuration and bundling
+
+Git & GitHub – Version control
+
+Postman – API testing (future backend integration)
+
+Deployment
+
+Netlify  – Static hosting with CDN edge caching
+
+⚙️ Local Setup
+Prerequisites
+
+Node.js ≥ 16
+
+npm or yarn
+
+Installation
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+npm install
+
+
+or
+
+yarn install
+
+🔐 Environment Variables
+
+Create a .env file in the root directory:
+
+REACT_APP_EMAIL=your-email@example.com
+REACT_APP_PHONE=+2547XXXXXXXX
+REACT_APP_GITHUB=https://github.com/yourusername
+REACT_APP_LINKEDIN=https://linkedin.com/in/yourusername
+
+
+These values are consumed inside the Footer and Hero components.
+
+▶️ Running the Application
+Development Mode
+npm start
+
+
+Runs on:
+http://localhost:3000
+
+Production Build
+npm run build
+
+
+Outputs an optimized static build in the build/ directory.
+
+🧩 Customization Guide (Exact Locations)
+Update Personal Info
+
+Hero.jsx → name, title, introduction text
+
+Footer.jsx → contact details & social links
+
+Update Projects
+
+Edit src/components/Projects.jsx:
+
+const projects = [
+  {
+    id: 1,
+    title: "Mental Health Chatbot",
+    description: "AI-powered chatbot for mood detection",
+    techStack: ["React", "Node.js", "NLP"],
+    demoVideo: "https://loom.com/...",
+    codeUrl: "https://github.com/..."
+  }
+];
+
+Update Resume Content
+
+Resume.jsx → experience, education, certifications
+
+Replace PDF in public/ to update downloadable resume
+
+🎨 Styling & Theme Control
+
+Modify tailwind.config.js:
+
+extend: {
+  colors: {
+    primary: '#2563eb',
+    secondary: '#7c3aed',
+  },
+  fontFamily: {
+    sans: ['Inter', 'system-ui'],
+  },
+}
+
+🚀 Deployment
+Netlify
+
+npm run build
+
+Drag build/ folder into Netlify dashboard
+
+
+
+🔍 Performance Considerations
+
+Static asset delivery via CDN
+
+Tree-shaken JavaScript bundles
+
+Lazy-loaded animations
+
+Optimized image sizes
+
+Minimal runtime dependencies
+
+♿ Accessibility
+
+Semantic HTML structure
+
+Keyboard-navigable components
+
+Sufficient color contrast
+
+ARIA labels for interactive elements
+
+🔮 Planned Enhancements
+
+Backend-powered contact form (Node + Email API)
+
+Blog section with Markdown rendering
+
+PWA support (offline + installable)
+
+SEO meta tags & Open Graph data
+
+Analytics integration
+
+📬 Contact
+
+Shayan Kahumu
+📧 nyamburawahu16@gmail.com
+
+🔗 GitHub: https://github.com/shlavin
+
+📄 License
+
+MIT License – free to use, modify, and distribute.
+
+⭐ If this repository helped you, consider starring it on GitHub.
+
