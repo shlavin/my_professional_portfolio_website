@@ -1,7 +1,7 @@
 // src/components/Projects.jsx
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Play, Code, X, Github } from "lucide-react";
+import { Play, X, Github } from "lucide-react";
 
 const projects = [
   {
