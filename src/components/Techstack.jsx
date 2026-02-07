@@ -308,9 +308,7 @@ const Techstack = () => {
                             <span className="font-medium text-gray-900 dark:text-white">
                               {skill.name}
                             </span>
-                            <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
-                              {skill.proficiency}%
-                            </span>
+                          
                           </div>
                           <Progress value={skill.proficiency} />
                         </div>
